@@ -1,0 +1,5 @@
+/keystore/*.p12
+/bin/
+*.exe
+*.test
+.idea
