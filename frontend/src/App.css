@@ -270,9 +270,14 @@
 
 .logs-detail {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 16px;
   padding: 8px 4px;
+  min-width: 0;
+}
+
+.logs-detail > div {
+  min-width: 0;
 }
 
 .logs-detail h4 {
@@ -289,7 +294,9 @@
   background: var(--code-bg);
   border-radius: 8px;
   font-size: 12px;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow-y: auto;
   max-height: 200px;
 }
 
